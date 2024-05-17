@@ -1,140 +1,87 @@
 # po-h object (po-header)
-
+**Note : PO --> Purchase Order**
 ```
-	"no_karcis": "31321315",
-	"tgl_karcis": "10\/05\/2024",
-	"no_sj": "111",
-	"tgl_sj": "10\/05\/2024",
-	"group_type": "1",
-	"netto": 1.0,
-	"disc": [
-		{
-			"disc": 25.0
-		},
-		{
-			"disc": 25.0
-		},
-		{
-			"disc": 25.0
-		},
-		{
-			"disc": 25.0
-		},
-		{
-			"disc": 25.0
-		}
-	],
-	"f_disc": [
-		{
-			"f_disc": false
-		},
-		{
-			"f_disc": false
-		},
-		{
-			"f_disc": false
-		},
-		{
-			"f_disc": false
-		},
-		{
-			"f_disc": false
-		}
-	],
-	"disc_rp": 1.0,
-	"ppn": 1.0,
-	"ppn_rp": 1.0,
-	"gtotal": 1.0,
-	"crc_code": "1",
-	"kd_purch": "1",
-	"user_entry_rcv": "1",
-	"tgl_entry_rcv": "10\/05\/2024",
-	"user_confirm_rcv": "1",
-	"tgl_confirm_rcv": "10\/05\/2024",
-	"user_confirm_byr": "11111",
-	"tgl_confirm_byr": "10\/05\/2024",
-	"cara_bayar": "1",
-	"f_lengkap": false,
-	"f_match": false,
-	"f_match_ppn": false,
-	"tt_no": "11",
-	"tt_tgl": "10\/05\/2024",
-	"tt_no_ppn": "111",
-	"tt_tgl_ppn": "10\/05\/2024",
-	"due_day": 1,
-	"iv_no": "1",
-	"iv_tgl": "10\/05\/2024",
-	"iv_no_ppn": "01\/11\/2001",
-	"iv_tgl_ppn": "10\/05\/2024",
-	"no_kontrak": "111",
-	"tgl_load": "10\/05\/2024",
-	"tgl_lengkap": null,
-	"user_lengkap": "1",
-	"statusacc": "1",
-	"rate_beli": 0.1,
+	{
+		"po_no": "0000000001",
+		"po_date": "17\/05\/2024",
+		"pr_no": "0000000003",
+		"pr_date": "17\/05\/2024",
+		"sup_kd": "A020",
+		"netto": 0.0,
+		"disc": 0.0,
+		"disc_type": "",
+		"disc_rp": null,
+		"tppn_rp": 0.0,
+		"grand_total": 20000.0,
+		"crdate": "17\/05\/2024",
+		"crtime": "16:38:10",
+		"cruser": "ADMIN",
+		"upddate": null,
+		"upduser": "",
+		"f_status": "1",
+		"user_batal": "",
+		"tgl_batal": null,
+		"expired_date": "17\/05\/2024",
+		"expected_date": "17\/05\/2024",
+		"dept_kd": "FBP",
+		"divisi_kd": "11",
+		"subdiv_kd": "P",
+		"kontrakno": "0000000002",
+		"kontrak_date": null,
+		"f-complete": false
+	}
+```
+
+# po-h (po-header) and po-d object (po-detail)
+```
+{
+	"po_no": "0000000001",
+	"po_date": "17\/05\/2024",
+	"pr_no": "0000000003",
+	"pr_date": "17\/05\/2024",
+	"sup_kd": "JAYA KENCANA.PT",
+	"netto": 0.0,
+	"disc": 0.0,
+	"disc_type": "",
+	"disc_rp": null,
+	"tppn_rp": 0.0,
+	"grand_total": 20000.0,
+	"crdate": "17\/05\/2024",
+	"crtime": "16:38:10",
+	"cruser": "ADMIN",
+	"upddate": null,
+	"upduser": "",
+	"f_status": "1",
+	"user_batal": "",
+	"tgl_batal": null,
+	"expired_date": "17\/05\/2024",
+	"expected_date": "17\/05\/2024",
+	"dept_kd": "Food & Beverage Production",
+	"divisi_kd": "HOTEL",
+	"subdiv_kd": "RUANG MAHA KARYA",
+	"kontrakno": "0000000002",
+	"kontrak_date": null,
+	"f_complete": false,
 	"items": [
 		{
-			"group_type": "1",
-			"no_karcis": "31321315",
-			"tgl_karcis": "10\/05\/2024",
-			"no_po": "31321315",
-			"tgl_po": "10\/05\/2024",
-			"due_day": 1,
-			"kd_barang": "1234",
-			"qty": 124.0,
-			"qty_bonus": 1.0,
-			"harga": 1.0,
-			"satuan": "1",
-			"konversi": 1.0,
-			"uom": "1",
-			"sub_total": 1.0,
-			"disc": [
-				{
-					"disc": 12.0
-				},
-				{
-					"disc": 12.0
-				},
-				{
-					"disc": 12.0
-				},
-				{
-					"disc": 12.0
-				},
-				{
-					"disc": 12.0
-				}
-			],
-			"f_disc": [
-				{
-					"f_disc": false
-				},
-				{
-					"f_disc": false
-				},
-				{
-					"f_disc": false
-				},
-				{
-					"f_disc": false
-				},
-				{
-					"f_disc": false
-				}
-			],
-			"disc_rp": 1.0,
-			"ppn_bm": 1.0,
-			"ppn_bm_rp": 1.0,
-			"gtotal": 1.0,
-			"harga_po": 1.0,
-			"kd_jenis": "1",
-			"acc_no": "1",
-			"pos_budget_kd": "1",
-			"kd_jenis_old": "1",
-			"alasan_beda_harga": "1",
-			"user_cek_harga": "1",
-			"tgl_cek_harga": "10\/05\/2024",
-			"statusacc": ""
+			"po_no": "0000000001",
+			"po_date": "17\/05\/2024",
+			"kdbar": "0006",
+			"kdjns": "11P10",
+			"kdstn_stok": "013",
+			"kdstn_krm": "",
+			"qty": 2.0,
+			"disc_type": "",
+			"disc": null,
+			"disc_rp": null,
+			"ppn": 11.0,
+			"ppn_rp": 4400.0,
+			"qty_trm": 0.0,
+			"lok_kd": "MOVENPICK HOTEL JAKARTA CITY CENTRE",
+			"harga": 20000.0,
+			"qty_terima": 0.0,
+			"kdstn_beli": "003"
 		}
 	]
 }
+```
