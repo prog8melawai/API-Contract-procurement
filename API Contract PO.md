@@ -2,86 +2,156 @@
 **Note : PO --> Purchase Order**
 ```
 	{
-		"po_no": "0000000001",
-		"po_date": "17\/05\/2024",
-		"pr_no": "0000000003",
-		"pr_date": "17\/05\/2024",
-		"sup_kd": "A020",
-		"netto": 0.0,
-		"disc": 0.0,
-		"disc_type": "",
-		"disc_rp": null,
-		"tppn_rp": 0.0,
-		"grand_total": 20000.0,
-		"crdate": "17\/05\/2024",
-		"crtime": "16:38:10",
-		"cruser": "ADMIN",
-		"upddate": null,
-		"upduser": "",
-		"f_status": "1",
-		"user_batal": "",
-		"tgl_batal": null,
-		"expired_date": "17\/05\/2024",
-		"expected_date": "17\/05\/2024",
-		"dept_kd": "FBP",
-		"divisi_kd": "11",
-		"subdiv_kd": "P",
-		"kontrakno": "0000000002",
-		"kontrak_date": null,
-		"f-complete": false
+		"po_no": String,
+		"po_date": Date,
+		"pr_no": String,
+		"pr_date": Date,
+		"sup_kd": String,
+		"netto": Float,
+		"disc": Float,
+		"disc_type": String,
+		"disc_rp": Float,
+		"tppn_rp": Float,
+		"grand_total": Float,
+		"crdate": Date,
+		"crtime": String,
+		"cruser": String,
+		"upddate": Date,
+		"upduser": String,
+		"f_status": String,
+		"user_batal": String,
+		"tgl_batal": Date,
+		"expired_date": Date,
+		"expected_date": Date,
+		"dept_kd": String,
+		"divisi_kd": String,
+		"subdiv_kd": String,
+		"kontrakno": String,
+		"kontrak_date": Date,
+		"f-complete": Boolean,
+		"user-conf" : String,
+		"tgl-conf" : Date
 	}
 ```
 
 # po-h (po-header) and po-d object (po-detail)
 ```
 {
-	"po_no": "0000000001",
-	"po_date": "17\/05\/2024",
-	"pr_no": "0000000003",
-	"pr_date": "17\/05\/2024",
-	"sup_kd": "JAYA KENCANA.PT",
-	"netto": 0.0,
-	"disc": 0.0,
-	"disc_type": "",
-	"disc_rp": null,
-	"tppn_rp": 0.0,
-	"grand_total": 20000.0,
-	"crdate": "17\/05\/2024",
-	"crtime": "16:38:10",
-	"cruser": "ADMIN",
-	"upddate": null,
-	"upduser": "",
-	"f_status": "1",
-	"user_batal": "",
-	"tgl_batal": null,
-	"expired_date": "17\/05\/2024",
-	"expected_date": "17\/05\/2024",
-	"dept_kd": "Food & Beverage Production",
-	"divisi_kd": "HOTEL",
-	"subdiv_kd": "RUANG MAHA KARYA",
-	"kontrakno": "0000000002",
-	"kontrak_date": null,
-	"f_complete": false,
+	"po_no": String,
+	"po_date": Date,
+	"pr_no": String,
+	"pr_date": Date,
+	"sup_kd": String,
+	"netto": Float,
+	"disc": Float,
+	"disc_type": String,
+	"disc_rp": Float,
+	"tppn_rp": Float,
+	"grand_total": Float,
+	"crdate": Date,
+	"crtime": String,
+	"cruser": String,
+	"upddate": Date,
+	"upduser": String,
+	"f_status": String,
+	"user_batal": String,
+	"tgl_batal": Date,
+	"expired_date": Date,
+	"expected_date": Date,
+	"dept_kd": String,
+	"divisi_kd": String,
+	"subdiv_kd": String,
+	"kontrakno": String,
+	"kontrak_date": Date,
+	"f-complete": Boolean,
+	"user-conf" : String,
+	"tgl-conf" : Date
 	"items": [
 		{
-			"po_no": "0000000001",
-			"po_date": "17\/05\/2024",
-			"kdbar": "0006",
-			"kdjns": "11P10",
-			"kdstn_stok": "013",
-			"kdstn_krm": "",
-			"qty": 2.0,
-			"disc_type": "",
-			"disc": null,
-			"disc_rp": null,
-			"ppn": 11.0,
-			"ppn_rp": 4400.0,
-			"qty_trm": 0.0,
-			"lok_kd": "MOVENPICK HOTEL JAKARTA CITY CENTRE",
-			"harga": 20000.0,
-			"qty_terima": 0.0,
-			"kdstn_beli": "003"
+			"po_no": String,
+			"po_date": Date,
+			"kdbar": String,
+			"kdjns": String,
+			"kdstn_stok": String,
+			"kdstn_krm": String,
+			"qty": Float,
+			"disc_type": String,
+			"disc": Float,
+			"disc_rp": Float,
+			"ppn": Float,
+			"ppn_rp": Float,
+			"qty_trm": Float,
+			"lok_kd": String,
+			"harga": Float,
+			"qty_terima": Float,
+			"kdstn_beli": String
 		}
 	]
 }
 ```
+
+**GET /procurement/web//getpo/{{token}}** 
+----
+  Returns all PO Headers (po-h) in the system
+* **URL Params**  
+  *Required:* `token=[string]`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:**  
+* **Code:** 200  
+  **Content:**  
+```
+{
+    [
+        {<po-h object>},
+        {<po-h object>},
+        {<po-h object>},
+        ....
+    ]
+}
+```
+
+* **Error Response:**  
+  * **Code:** 404  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR  
+  * **Code:** 401  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR 
+  * **Code:** 503  
+  **Content:** `{ error : "Database not connected" }`  
+
+
+**GET /procurement/web/getpodetail/{{pono}}/{{token}}** 
+----
+  Returns PO header and PO detail based on the pono parameter.
+* **URL Params**  
+  *Required:* `token=[string]`
+  *Required:* `pono=[string] (unique)`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:**  
+* **Code:** 200  
+  **Content:**  
+```
+{
+    [
+        {<po-h and po-d object>}
+    ]
+}
+```
+
+* **Error Response:**  
+  * **Code:** 404  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR  
+  * **Code:** 401  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR 
+  * **Code:** 503  
+  **Content:** `{ error : "Database not connected" }`  
+
