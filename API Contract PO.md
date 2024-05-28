@@ -71,7 +71,9 @@
 			"po_no": String,
 			"po_date": Date,
 			"kdbar": String,
+			"nmbar": String,
 			"kdjns": String,
+			"nmjns": String,
 			"kdstn_stok": String,
 			"kdstn_krm": String,
 			"qty": Float,
@@ -85,6 +87,7 @@
 			"harga": Float,
 			"qty_terima": Float,
 			"kdstn_beli": String
+			"nmstn_beli": String
 		}
 	]
 }
