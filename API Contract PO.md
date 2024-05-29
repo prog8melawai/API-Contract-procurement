@@ -127,6 +127,41 @@
   **Content:** `{ error : "Database not connected" }`  
 
 
+**GET /procurement/web/getposup/{{supkd}}/{{token}}** 
+----
+  Returns PO Headers (po-h) in the system that has matching supplier code (supkd)
+* **URL Params**  
+  *Required:* `token=[string]`
+  *Required:* `supkd=[string]`
+* **Data Params**  
+  None
+* **Headers**  
+  Content-Type: application/json
+* **Success Response:**  
+* **Code:** 200  
+  **Content:**  
+```
+{
+    [
+        {<po-h object>},
+        {<po-h object>},
+        {<po-h object>},
+        ....
+    ]
+}
+```
+
+* **Error Response:**  
+  * **Code:** 404  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR  
+  * **Code:** 401  
+  **Content:** `{ error : "Unauthorized" }`  
+  OR 
+  * **Code:** 503  
+  **Content:** `{ error : "Database not connected" }`  
+
+
 **GET /procurement/web/getpodetail/{{pono}}/{{token}}** 
 ----
   Returns PO header and PO detail based on the pono parameter.
