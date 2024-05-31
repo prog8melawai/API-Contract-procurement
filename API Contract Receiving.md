@@ -1,15 +1,15 @@
 # URL LIST :
-1. GET Receiving Header \n
-/procurement/web/recv/{{sort}}/{{token}}
+1. GET Receiving Header 
+**/procurement/web/recv/{{sort}}/{{token}}**
 
-2. GET Receiving Detail\n
-/procurement/web/receiving/{{nokarcis}}/{{token}}
+2. GET Receiving Detail
+**/procurement/web/receiving/{{nokarcis}}/{{token}}**
 
-3. POST Receiving\n
-/procurement/web/recv/{{sort}}/{{token}}
+3. POST Receiving
+**/procurement/web/recv/{{sort}}/{{token}}**
 
-4. PUT Receiving (DEBUG ONLY)\n
-/procurement/web/updatereceiving/{{nokarcis}}/{{token}}
+4. PUT Receiving (DEBUG ONLY)
+**/procurement/web/updatereceiving/{{nokarcis}}/{{token}}**
 
 **GET /procurement/web/recv/{{sort}}/{{token}}** 
 ----

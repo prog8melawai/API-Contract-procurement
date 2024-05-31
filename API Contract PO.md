@@ -1,15 +1,15 @@
 # URL LIST :
-1. POST PO Detail by PO No \n
-/procurement/web/podetail/{{token}}
+1. POST PO Detail by PO No : 
+**/procurement/web/podetail/{{token}}**
 
-2. GET PO Header By Supplier \n
-/procurement/web/getposup/{{sup_kd}}/{{token}}
+2. GET PO Header By Supplier : 
+**/procurement/web/getposup/{{sup_kd}}/{{token}}**
 
-3. GET PO Header \n
-/procurement/web/getpo/{{token}}
+3. GET PO Header : 
+**/procurement/web/getpo/{{token}}**
 
-4. GET PO Detail \n
-/procurement/web/getpodetail/{{pono}}/{{token}}
+4. GET PO Detail : 
+**/procurement/web/getpodetail/{{pono}}/{{token}}**
 
 **POST /procurement/web/podetail/{{token}}** 
 ----
